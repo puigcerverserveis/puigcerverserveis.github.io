@@ -3,80 +3,261 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Grupo Puigcerver | Serveis per habitatge i local</title>
-  <meta name="description" content="Grupo Puigcerver: serveis i manteniment per habitatge i petit local. Tracte directe, pressupost clar. Contacte per trucada o WhatsApp." />
+  <title>Grupo Puigcerver | Servicios generales para vivienda y local</title>
+  <meta name="description" content="Servicios generales en toda Catalunya. Urgencias a 1h30 desde Rubi. Trato directo, claridad y soluciones de mantenimiento, reparaciones y mejoras para vivienda y pequeno local." />
   <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
-  <header class="wrap">
+  <header class="wrap hero">
     <div class="brand">
       <div class="logo">GP</div>
       <div>
         <h1>Grupo Puigcerver</h1>
-        <p class="subtitle">Serveis per habitatge i local · Tracte directe · Pressupost clar</p>
+        <p class="subtitle" data-i18n="tagline">Servicios generales para vivienda y pequeno local, con trato directo y claridad.</p>
       </div>
     </div>
 
+    <div class="lang-switch" aria-label="Select language">
+      <button data-lang="es" class="pill active">ES</button>
+      <button data-lang="en" class="pill">EN</button>
+      <button data-lang="fr" class="pill">FR</button>
+      <button data-lang="ca" class="pill">CA</button>
+    </div>
+
     <div class="cta">
-      <a class="btn primary" href="tel:+34631964656">📞 Trucar ara</a>
-      <a class="btn" href="https://wa.me/34631964656" target="_blank" rel="noopener">💬 WhatsApp</a>
+      <a class="btn primary" href="tel:+34672737607" data-i18n="callCta">Llamar ahora</a>
+      <a class="btn" id="cta-whatsapp" href="https://wa.me/34672737607?text=Hola%20Grupo%20Puigcerver%2C%20necesito%20ayuda%20con%20%5Btema%5D%20en%20%5Bzona%5D%2C%20urgencia%20%5Bhoy%2F48h%2Fprogramar%5D." target="_blank" rel="noopener" data-i18n="waCta">WhatsApp ahora</a>
     </div>
 
     <p class="micro">
-      Tel: <strong>631 964 656</strong> · Email: <strong>reformaspuigcerver@gmail.com</strong>
+      Tel: <strong>+34 672 737 607</strong> &middot; Email: <strong>contacto@grupopuigcerver.com</strong>
     </p>
   </header>
 
   <main class="wrap">
-    <section class="card">
-      <h2>Què fem</h2>
-      <p>
-        Som una <strong>empresa de serveis</strong> orientada a resoldre necessitats reals de manteniment, reparació i millores
-        en habitatges i petits locals. Sense encasellar-nos: busquem la solució adequada i l’executem bé.
+    <section class="card highlight">
+      <div class="label" data-i18n="coverageLabel">Zona de trabajo</div>
+      <h2 data-i18n="coverageTitle">Servicio en toda Catalunya, urgencias hasta 1h30 desde Rubi.</h2>
+      <p data-i18n="coverageText">
+        Mantenimiento y reparaciones en todo el territorio con agenda programada. Urgencias: respuesta prioritaria dentro de un radio aproximado de 1h30 desde Rubi para no comprometer calidad ni tiempos.
       </p>
+      <div class="note" data-i18n="coverageNote">
+        Si estas fuera del radio de urgencias, cuentanos tu caso: organizamos visita o servicio planificado.
+      </div>
+    </section>
 
+    <section class="card">
+      <h2 data-i18n="whatTitle">Soluciones claras para vivienda y pequeno local</h2>
+      <p data-i18n="whatText">
+        Mantenimiento, reparaciones y mejoras sin complicar: analizamos el problema, proponemos la ruta simple y coordinamos la ejecucion con transparencia.
+      </p>
       <ul class="grid">
-        <li><strong>Portes i accessos</strong><span>Ajustos, mecanismes, reforços, substitució de components</span></li>
-        <li><strong>Persianes i sistemes</strong><span>Reparació de mecanismes, guies, recollidors i ajustos</span></li>
-        <li><strong>Reparacions del dia a dia</strong><span>Arreglos, fixacions, petites intervencions, solucions a mida</span></li>
-        <li><strong>Manteniment i millores</strong><span>Posada a punt i prevenció d’avaries recurrents</span></li>
+        <li>
+          <strong data-i18n="item1Title">Urgencias razonables</strong>
+          <span data-i18n="item1Text">Intervenciones de impacto inmediato dentro del radio Rubi -> 1h30.</span>
+        </li>
+        <li>
+          <strong data-i18n="item2Title">Planificacion</strong>
+          <span data-i18n="item2Text">Trabajos programados en cualquier punto de Catalunya sin prisa y bien hechos.</span>
+        </li>
+        <li>
+          <strong data-i18n="item3Title">Seguridad y cuidado</strong>
+          <span data-i18n="item3Text">Revisamos riesgos basicos de electricidad, agua y accesos; evitamos sorpresas.</span>
+        </li>
+        <li>
+          <strong data-i18n="item4Title">Equipo experto</strong>
+          <span data-i18n="item4Text">Especialistas cercanos en mantenimiento, bricolaje tecnico y pequenas reformas.</span>
+        </li>
       </ul>
     </section>
 
     <section class="card">
-      <h2>Zona de treball</h2>
-      <p>
-        Treballem habitualment <strong>cap a la zona nord de Rubí i voltants</strong>, prioritzant zones amb menys oferta de serveis
-        per poder donar resposta (segons agenda).
-      </p>
-    </section>
-
-    <section class="card">
-      <h2>Per respondre ràpid</h2>
-      <p class="mini">
-        Si ens escrius per WhatsApp, envia:
-        <strong>1)</strong> què passa (1 frase) · <strong>2)</strong> zona · <strong>3)</strong> 2 fotos o un vídeo curt.
+      <h2 data-i18n="respondTitle">Para responder rapido</h2>
+      <p class="mini" data-i18n="respondText">
+        Envia por WhatsApp: 1) Que ocurre (1 frase), 2) Zona, 3) Urgencia (hoy / 48h / programar), 4) 2 fotos si es posible.
       </p>
 
       <div class="cta inline">
-        <a class="btn primary" href="https://wa.me/34631964656?text=Hola%20Grupo%20Puigcerver.%20Necessito%20ajuda%20amb%3A%20%5Bexplica%5D.%20Zona%3A%20%5Bzona%5D.%20Quan%3A%20%5Bavui%2Faquesta%20setmana%5D." target="_blank" rel="noopener">
-          💬 Enviar missatge ja preparat
-        </a>
-        <a class="btn" href="mailto:reformaspuigcerver@gmail.com?subject=Sol%C2%B7licitud%20de%20servei%20-%20Grupo%20Puigcerver&body=Hola%2C%0A%0ANecessito%20ajuda%20amb%3A%20%0AZona%3A%20%0AQuan%3A%20%0A%0ASi%20pot%20ser%2C%20adjunto%20fotos%2Fv%C3%ADdeo." >
-          ✉️ Enviar email
-        </a>
+        <a class="btn primary" id="cta-whatsapp-inline" href="https://wa.me/34672737607?text=Hola%20Grupo%20Puigcerver%2C%20necesito%20ayuda%20con%20%5Btema%5D%20en%20%5Bzona%5D%2C%20urgencia%20%5Bhoy%2F48h%2Fprogramar%5D." target="_blank" rel="noopener" data-i18n="waPrepared">Enviar mensaje preparado</a>
+        <a class="btn" href="mailto:contacto@grupopuigcerver.com?subject=Solicitud%20de%20servicio%20-%20Grupo%20Puigcerver&body=Hola%2C%0A%0ANecesito%20ayuda%20con%3A%20%0AZona%3A%20%0AUrgencia%3A%20%0A%0AAdjunto%20fotos%20si%20es%20posible." data-i18n="emailCta">Enviar email</a>
       </div>
     </section>
 
+    <section class="card">
+      <div class="label" data-i18n="magLabel">Revista en marcha</div>
+      <h2 data-i18n="magTitle">Trucos, bricolaje basico, seguridad y mejoras sin alarmismo.</h2>
+      <p data-i18n="magText">
+        Lanzamos una revista ligera con articulos por barrio, calle y urbanizacion: guias claras, checklists y soluciones sencillas. Sin spam ni postureo, solo valor practico. En cada articulo recordaremos que puedes hablar con un experto cuando lo necesites.
+      </p>
+      <ul class="tags">
+        <li data-i18n="tag1">Trucos de mantenimiento</li>
+        <li data-i18n="tag2">Bricolaje basico</li>
+        <li data-i18n="tag3">Seguridad en casa</li>
+        <li data-i18n="tag4">Reparaciones y reformas ligeras</li>
+        <li data-i18n="tag5">Zonas con poca oferta</li>
+      </ul>
+    </section>
+
     <footer class="footer">
-      <p>© <span id="y"></span> Grupo Puigcerver · 631 964 656 · reformaspuigcerver@gmail.com</p>
+      <p>&copy; <span id="y"></span> Grupo Puigcerver &middot; +34 672 737 607 &middot; contacto@grupopuigcerver.com</p>
     </footer>
   </main>
 
   <script>
+    const translations = {
+      es: {
+        tagline: "Servicios generales para vivienda y pequeno local, con trato directo y claridad.",
+        coverageLabel: "Zona de trabajo",
+        coverageTitle: "Servicio en toda Catalunya, urgencias hasta 1h30 desde Rubi.",
+        coverageText: "Mantenimiento y reparaciones en todo el territorio con agenda programada. Urgencias: respuesta prioritaria dentro de un radio aproximado de 1h30 desde Rubi para no comprometer calidad ni tiempos.",
+        coverageNote: "Si estas fuera del radio de urgencias, cuentanos tu caso: organizamos visita o servicio planificado.",
+        whatTitle: "Soluciones claras para vivienda y pequeno local",
+        whatText: "Mantenimiento, reparaciones y mejoras sin complicar: analizamos el problema, proponemos la ruta simple y coordinamos la ejecucion con transparencia.",
+        item1Title: "Urgencias razonables",
+        item1Text: "Intervenciones de impacto inmediato dentro del radio Rubi -> 1h30.",
+        item2Title: "Planificacion",
+        item2Text: "Trabajos programados en cualquier punto de Catalunya sin prisa y bien hechos.",
+        item3Title: "Seguridad y cuidado",
+        item3Text: "Revisamos riesgos basicos de electricidad, agua y accesos; evitamos sorpresas.",
+        item4Title: "Equipo experto",
+        item4Text: "Especialistas cercanos en mantenimiento, bricolaje tecnico y pequenas reformas.",
+        respondTitle: "Para responder rapido",
+        respondText: "Envia por WhatsApp: 1) Que ocurre (1 frase), 2) Zona, 3) Urgencia (hoy / 48h / programar), 4) 2 fotos si es posible.",
+        magLabel: "Revista en marcha",
+        magTitle: "Trucos, bricolaje basico, seguridad y mejoras sin alarmismo.",
+        magText: "Lanzamos una revista ligera con articulos por barrio, calle y urbanizacion: guias claras, checklists y soluciones sencillas. Sin spam ni postureo, solo valor practico. En cada articulo recordaremos que puedes hablar con un experto cuando lo necesites.",
+        tag1: "Trucos de mantenimiento",
+        tag2: "Bricolaje basico",
+        tag3: "Seguridad en casa",
+        tag4: "Reparaciones y reformas ligeras",
+        tag5: "Zonas con poca oferta",
+        callCta: "Llamar ahora",
+        waCta: "WhatsApp ahora",
+        waPrepared: "Enviar mensaje preparado",
+        emailCta: "Enviar email",
+        waPrefill: "Hola Grupo Puigcerver, necesito ayuda con [tema] en [zona], urgencia [hoy/48h/programar]."
+      },
+      en: {
+        tagline: "General services for homes and small venues with clear, direct support.",
+        coverageLabel: "Service area",
+        coverageTitle: "Service across Catalonia, emergencies within ~1h30 from Rubi.",
+        coverageText: "Scheduled maintenance and repairs anywhere in Catalonia. Emergencies: priority response within roughly 1h30 from Rubi to keep quality and timing under control.",
+        coverageNote: "Outside the emergency radius? Tell us your case and we will schedule a planned visit.",
+        whatTitle: "Clear solutions for home and small business",
+        whatText: "Maintenance, repairs, and improvements without friction: we assess, simplify, and execute with transparency.",
+        item1Title: "Reasonable emergencies",
+        item1Text: "Immediate-impact interventions within the Rubi -> 1h30 radius.",
+        item2Title: "Planning",
+        item2Text: "Scheduled work anywhere in Catalonia, done carefully and without rush.",
+        item3Title: "Safety and care",
+        item3Text: "Basic checks on electricity, water, and access points to avoid surprises.",
+        item4Title: "Expert team",
+        item4Text: "Specialists in maintenance, practical DIY, and light refurbishments.",
+        respondTitle: "For a quick reply",
+        respondText: "Send via WhatsApp: 1) What happened (1 line), 2) Area, 3) Urgency (today / 48h / scheduled), 4) 2 photos if you can.",
+        magLabel: "Magazine coming",
+        magTitle: "Tips, basic DIY, safety, and home upgrades without hype.",
+        magText: "We are launching a light magazine by neighborhood, street, and urbanisation: clear guides, checklists, and simple fixes. No spam, just practical value, plus a reminder that an expert is one chat away.",
+        tag1: "Maintenance tips",
+        tag2: "Basic DIY",
+        tag3: "Home safety",
+        tag4: "Light repairs and upgrades",
+        tag5: "Low-competition areas",
+        callCta: "Call now",
+        waCta: "WhatsApp now",
+        waPrepared: "Send prepared message",
+        emailCta: "Send email",
+        waPrefill: "Hi Grupo Puigcerver, I need help with [topic] in [area], urgency [today/48h/scheduled]."
+      },
+      fr: {
+        tagline: "Services generaux pour maison et petit local, avec accompagnement clair et direct.",
+        coverageLabel: "Zone d'intervention",
+        coverageTitle: "Intervention dans toute la Catalogne, urgences jusqu'a ~1h30 depuis Rubi.",
+        coverageText: "Maintenance et reparations programmees partout en Catalogne. Urgences : reponse prioritaire dans un rayon d'environ 1h30 depuis Rubi pour assurer qualite et delais.",
+        coverageNote: "Hors rayon d'urgence ? Decrivez votre cas et nous planifierons une visite.",
+        whatTitle: "Solutions claires pour maison et petit commerce",
+        whatText: "Maintenance, reparations et ameliorations sans detours : on evalue, on simplifie, on execute en toute transparence.",
+        item1Title: "Urgences raisonnees",
+        item1Text: "Interventions a impact immediat dans le rayon Rubi -> 1h30.",
+        item2Title: "Planification",
+        item2Text: "Travaux planifies partout en Catalogne, faits sereinement.",
+        item3Title: "Securite et soin",
+        item3Text: "Verifications de base sur electricite, eau et acces pour eviter les surprises.",
+        item4Title: "Equipe experte",
+        item4Text: "Specialistes en maintenance, bricolage pratique et petites renovations.",
+        respondTitle: "Pour repondre vite",
+        respondText: "Envoyez par WhatsApp : 1) Ce qui se passe (1 ligne), 2) Zone, 3) Urgence (aujourd'hui / 48h / programme), 4) 2 photos si possible.",
+        magLabel: "Magazine en cours",
+        magTitle: "Astuces, bricolage de base, securite et ameliorations sans alarmisme.",
+        magText: "Nous lancons un magazine par quartier, rue et urbanisation : guides clairs, checklists et solutions simples. Pas de spam, juste du concret, avec rappel qu'un expert est disponible.",
+        tag1: "Astuces de maintenance",
+        tag2: "Bricolage de base",
+        tag3: "Securite a domicile",
+        tag4: "Reparations legeres",
+        tag5: "Zones a faible offre",
+        callCta: "Appeler",
+        waCta: "WhatsApp",
+        waPrepared: "Envoyer le message prepare",
+        emailCta: "Envoyer un email",
+        waPrefill: "Bonjour Grupo Puigcerver, j'ai besoin d'aide pour [sujet] a [zone], urgence [aujourd'hui/48h/programme]."
+      },
+      ca: {
+        tagline: "Serveis generals per a habitatge i petit local amb tracte directe i clar.",
+        coverageLabel: "Zona de treball",
+        coverageTitle: "Servei a tot Catalunya, urgencies fins a 1h30 des de Rubi.",
+        coverageText: "Manteniment i reparacions arreu amb agenda programada. Urgencies: resposta prioritaria dins d'un radi aproximat d'1h30 des de Rubi per garantir qualitat i temps.",
+        coverageNote: "Si estas fora del radi d'urgencies, explica'ns el cas i programem la visita.",
+        whatTitle: "Solucions clares per a casa i petit negoci",
+        whatText: "Manteniment, reparacions i millores sense embolics: valorem, simplifiquem i executem amb transparencia.",
+        item1Title: "Urgencies raonables",
+        item1Text: "Intervencions d'impacte immediat dins del radi Rubi -> 1h30.",
+        item2Title: "Planificacio",
+        item2Text: "Treballs programats a qualsevol punt de Catalunya, sense presses i ben fets.",
+        item3Title: "Seguretat i cura",
+        item3Text: "Revisem riscos basics d'electricitat, aigua i accessos; evitem sorpreses.",
+        item4Title: "Equip expert",
+        item4Text: "Especialistes en manteniment, bricolatge tecnic i petites reformes.",
+        respondTitle: "Per respondre rapid",
+        respondText: "Envia per WhatsApp: 1) Que passa (1 frase), 2) Zona, 3) Urgencia (avui / 48h / programar), 4) 2 fotos si pots.",
+        magLabel: "Revista en marxa",
+        magTitle: "Trucs, bricolatge basic, seguretat i millores sense alarmisme.",
+        magText: "Llancem una revista lleugera amb articles per barri, carrer i urbanitzacio: guies clares, checklists i solucions senzilles. Sense spam ni postureig, valor practic i recordatori que tens un expert a prop.",
+        tag1: "Trucs de manteniment",
+        tag2: "Bricolatge basic",
+        tag3: "Seguretat a casa",
+        tag4: "Reparacions i reformes lleugeres",
+        tag5: "Zones amb poca oferta",
+        callCta: "Trucar ara",
+        waCta: "WhatsApp ara",
+        waPrepared: "Enviar missatge preparat",
+        emailCta: "Enviar email",
+        waPrefill: "Hola Grupo Puigcerver, necessito ajuda amb [tema] a [zona], urgencia [avui/48h/programar]."
+      }
+    };
+
+    const textNodes = document.querySelectorAll("[data-i18n]");
+    const pills = document.querySelectorAll(".lang-switch button");
+    const waButtons = [document.getElementById("cta-whatsapp"), document.getElementById("cta-whatsapp-inline")];
+
+    function applyLang(lang) {
+      const t = translations[lang] || translations.es;
+      textNodes.forEach(node => {
+        const key = node.getAttribute("data-i18n");
+        if (t[key]) node.innerHTML = t[key];
+      });
+      const encoded = encodeURIComponent(t.waPrefill);
+      waButtons.forEach(btn => {
+        if (btn) btn.href = `https://wa.me/34672737607?text=${encoded}`;
+        if (btn && btn.dataset.i18n) btn.textContent = t[btn.dataset.i18n];
+      });
+      pills.forEach(p => p.classList.toggle("active", p.dataset.lang === lang));
+      document.documentElement.lang = lang;
+    }
+
+    pills.forEach(btn => btn.addEventListener("click", () => applyLang(btn.dataset.lang)));
     document.getElementById("y").textContent = new Date().getFullYear();
+    applyLang("es");
   </script>
 </body>
 </html>
-
