@@ -19,27 +19,34 @@
           </div>
         </div>
         <div class="topbar-actions">
-          <div class="lang-switch" aria-label="Select language">
-            <button data-lang="es" class="pill active">ES</button>
-            <button data-lang="en" class="pill">EN</button>
-            <button data-lang="fr" class="pill">FR</button>
-            <button data-lang="ca" class="pill">CA</button>
+          <div class="lang-dropdown">
+            <button id="lang-toggle" class="pill lang-toggle" aria-haspopup="true" aria-expanded="false">
+              <span id="lang-current-flag" aria-hidden="true">🇪🇸</span>
+              <span id="lang-current-label" class="sr-only">ES</span>
+            </button>
+            <div class="lang-menu" id="lang-menu" aria-label="Select language" hidden>
+              <button class="lang-option" data-lang="es" aria-label="Español"><span aria-hidden="true">🇪🇸</span><span class="sr-only">ES</span></button>
+              <button class="lang-option" data-lang="en" aria-label="English"><span aria-hidden="true">🇬🇧</span><span class="sr-only">EN</span></button>
+              <button class="lang-option" data-lang="fr" aria-label="Français"><span aria-hidden="true">🇫🇷</span><span class="sr-only">FR</span></button>
+              <button class="lang-option" data-lang="ca" aria-label="Català"><span aria-hidden="true">🇨🇦</span><span class="sr-only">CA</span></button>
+            </div>
           </div>
           <div class="cta inline topbar-cta">
-            <a class="btn primary" id="cta-whatsapp" data-short="WA" href="https://wa.me/34672737607?text=Hola%20Grupo%20Puigcerver%2C%20necesito%20ayuda%20con%20%5Btema%5D%20en%20%5Bzona%5D%2C%20urgencia%20%5Bhoy%2F48h%2Fprogramar%5D." target="_blank" rel="noopener" data-i18n="waCta">WhatsApp ahora</a>
-            <a class="btn" data-short="Tel" href="tel:+34672737607" data-i18n="callCta">Llamar ahora</a>
-            <a class="btn" id="cta-email" data-short="Mail" href="mailto:grupopuigcerver@gmail.com?subject=Presupuesto%20-%20Grupo%20Puigcerver&body=Hola%2C%0A%0ANecesito%20presupuesto%20para%3A%20%0AZona%3A%20%0APlazo%3A%20%0A%0AGracias." data-i18n="emailBudgetCta">Correo presupuesto</a>
+            <a class="btn primary iconic" id="cta-whatsapp" data-short="WA" href="https://wa.me/34672737607?text=Hola%20Grupo%20Puigcerver%2C%20necesito%20ayuda%20con%20%5Btema%5D%20en%20%5Bzona%5D%2C%20urgencia%20%5Bhoy%2F48h%2Fprogramar%5D." target="_blank" rel="noopener"><span class="icon icon-wa" aria-hidden="true"></span><span class="btn-label" data-i18n="waCta">WhatsApp ahora</span></a>
+            <a class="btn iconic" data-short="Tel" href="tel:+34672737607"><span class="icon icon-phone" aria-hidden="true"></span><span class="btn-label" data-i18n="callCta">Llamar ahora</span></a>
+            <a class="btn iconic" id="cta-email" data-short="Mail" href="mailto:grupopuigcerver@gmail.com?subject=Presupuesto%20-%20Grupo%20Puigcerver&body=Hola%2C%0A%0ANecesito%20presupuesto%20para%3A%20%0AZona%3A%20%0APlazo%3A%20%0A%0AGracias."><span class="icon icon-mail" aria-hidden="true"></span><span class="btn-label" data-i18n="emailBudgetCta">Correo presupuesto</span></a>
           </div>
         </div>
       </div>
       <div class="topbar-row topbar-nav">
         <div class="topbar-links">
-          <a href="#servicios" data-i18n="navServices">Servicios</a>
-          <a href="#seguridad" data-i18n="navSecurity">Seguridad</a>
-          <a href="#cobertura" data-i18n="navCoverage">Zona</a>
-          <a href="#contacto" data-i18n="navContact">Contacto</a>
-          <a href="#blog" data-i18n="navBlog">Blog</a>
-          <a href="#revista" data-i18n="navMagazine">Revista</a>
+          <a href="servicios.html" data-i18n="navServices">Servicios</a>
+          <a href="seguridad.html" data-i18n="navSecurity">Seguridad</a>
+          <a href="zona.html" data-i18n="navCoverage">Zona</a>
+          <a href="garantia.html" data-i18n="navGuarantee">Garantia</a>
+          <a href="contacto.html" data-i18n="navContact">Contacto</a>
+          <a href="blog.html" data-i18n="navBlog">Blog</a>
+          <a href="revista.html" data-i18n="navMagazine">Revista</a>
         </div>
       </div>
     </div>
@@ -47,13 +54,42 @@
 
   <main class="wrap">
     <section class="card highlight">
+      <div class="label" data-i18n="heroLabel">Servicios inmediatos</div>
+      <h2 data-i18n="heroTitle">Cerrajeria, persianas y refuerzos con trato directo.</h2>
+      <p data-i18n="heroText">En segundos sabes si encajamos: urgencias en 30-60 min segun radio, precios claros y trabajo bien hecho a la primera.</p>
+      <div class="cta inline">
+        <a class="btn primary" href="tel:+34672737607" data-i18n="callCta">Llamar ahora</a>
+        <a class="btn" id="cta-whatsapp-inline" href="https://wa.me/34672737607?text=Hola%20Grupo%20Puigcerver%2C%20necesito%20ayuda%20con%20%5Btema%5D%20en%20%5Bzona%5D%2C%20urgencia%20%5Bhoy%2F48h%2Fprogramar%5D." target="_blank" rel="noopener" data-i18n="waPrepared">Enviar mensaje preparado</a>
+      </div>
+    </section>
+
+    <section class="card" id="servicios">
+      <div class="label" data-i18n="whatLabel">Que hacemos</div>
+      <h2 data-i18n="whatTitle">Servicios clave para vivienda y local</h2>
+      <ul class="grid">
+        <li><strong data-i18n="item1Title">Urgencias y cerrajeria segura</strong><span data-i18n="item1Text">Accesos, aperturas razonables y refuerzos sin obra grande.</span></li>
+        <li><strong data-i18n="item3Title">Persianas y automatismos</strong><span data-i18n="item3Text">Locales y viviendas, ajustes, motores y puesta a punto.</span></li>
+        <li><strong data-i18n="item2Title">Soldadura y refuerzos</strong><span data-i18n="item2Text">Rejas, fijaciones y ajustes metalicos.</span></li>
+        <li><strong data-i18n="item5Title">Fontaneria esencial</strong><span data-i18n="item5Text">Fugas leves y ajustes sin sorpresas.</span></li>
+      </ul>
+      <div class="cta inline">
+        <a class="btn" href="servicios.html" data-i18n="navServices">Servicios</a>
+        <a class="btn" href="seguridad.html" data-i18n="navSecurity">Seguridad</a>
+      </div>
+    </section>
+
+    <section class="card" id="cobertura">
       <div class="label" data-i18n="coverageLabel">Zona de trabajo</div>
-      <h2 data-i18n="coverageTitle">Urgencias en Barcelones y alrededores; servicios programados en toda Catalunya.</h2>
+      <h2 data-i18n="coverageTitle">Urgencias en Barcelones y alrededores; agenda en el resto.</h2>
       <p data-i18n="coverageText">
-        Urgencias con llegada prioritaria dentro de un radio estimado de ~1h (unos 60 km) desde el Valles Occidental hacia Barcelones y entorno, para asegurar tiempos y calidad. El resto de Catalunya, lo cubrimos con agenda y compromiso.
+        Llegamos en 30-60 min aprox dentro de un radio urgente de ~60 km desde Valles Occidental hacia Barcelones. Fuera de ahi, confirmamos por adelantado antes de movernos.
       </p>
       <div class="note" data-i18n="coverageNote">
-        Fuera del radio urgente, avisanos: programamos visita, llevamos tecnico y resolvemos con la misma claridad. Mapa de zona de urgencias en camino; fuera de radio, cita concertada o pago previo para evitar desplazamientos en vano.
+        No somos una tienda de magia: haremos todo lo posible, pero no hacemos milagros. El desplazamiento no es gratuito y podemos pedir pago previo. Somos serios: vamos cuando es viable y el cliente cumple; asi evitamos malos servicios y clientes toxicos.
+      </div>
+      <div class="cta inline">
+        <a class="btn" href="zona.html" data-i18n="navCoverage">Ver zona</a>
+        <a class="btn primary" href="tel:+34672737607" data-i18n="callCta">Llamar ahora</a>
       </div>
     </section>
 
@@ -107,16 +143,37 @@
       </ul>
     </section>
 
-    <section class="card">
-      <h2 data-i18n="respondTitle">Para responder rapido</h2>
-      <p class="mini" data-i18n="respondText">
-        Envia por WhatsApp: 1) Que ocurre (1 frase), 2) Zona, 3) Urgencia (hoy / 48h / programar), 4) 2 fotos si es posible.
-      </p>
+    <section class="card" id="blog">
+      <div class="label" data-i18n="blogLabel">Blog</div>
+      <h2 data-i18n="blogTitle">Casos y consejos por zonas.</h2>
+      <p data-i18n="blogIntro">Publicamos articulos cortos con trabajos habituales y prevencion por barrio.</p>
+      <div class="cta inline">
+        <a class="btn" href="blog.html" data-i18n="navBlog">Ir al blog</a>
+      </div>
+    </section>
 
+    <section class="card" id="contacto">
+      <h2 data-i18n="respondTitle">Para responder rapido</h2>
+      <p class="mini" data-i18n="respondText">Envia por WhatsApp: 1) Que ocurre (1 frase), 2) Zona, 3) Urgencia (hoy / 48h / programar), 4) 2 fotos si es posible.</p>
       <div class="cta inline">
         <a class="btn primary" id="cta-whatsapp-inline" href="https://wa.me/34672737607?text=Hola%20Grupo%20Puigcerver%2C%20necesito%20ayuda%20con%20%5Btema%5D%20en%20%5Bzona%5D%2C%20urgencia%20%5Bhoy%2F48h%2Fprogramar%5D." target="_blank" rel="noopener" data-i18n="waPrepared">Enviar mensaje preparado</a>
-        <a class="btn" href="mailto:grupopuigcerver@gmail.com?subject=Solicitud%20de%20servicio%20-%20Grupo%20Puigcerver&body=Hola%2C%0A%0ANecesito%20ayuda%20con%3A%20%0AZona%3A%20%0AUrgencia%3A%20%0A%0AAdjunto%20fotos%20si%20es%20posible." data-i18n="emailCta">Enviar email</a>
+        <a class="btn" href="contacto.html" data-i18n="navContact">Contacto</a>
       </div>
+    </section>
+
+    <section class="card" id="garantia">
+      <div class="label" data-i18n="guaranteeLabel">Garantia</div>
+      <h2 data-i18n="guaranteeTitle">Envia factura y detalle para tu garantia.</h2>
+      <p data-i18n="guaranteeText">Adjunta la factura y describe el problema para que podamos responder rapido.</p>
+      <form class="form" id="guarantee-form">
+        <div class="field"><label data-i18n="gNameLabel">Nombre</label><input type="text" id="g-name" name="name" placeholder="Tu nombre" /></div>
+        <div class="field"><label data-i18n="gEmailLabel">Email</label><input type="email" id="g-email" name="email" placeholder="correo@ejemplo.com" required /></div>
+        <div class="field"><label data-i18n="gPhoneLabel">Telefono</label><input type="tel" id="g-phone" name="phone" placeholder="+34..." /></div>
+        <div class="field"><label data-i18n="gInvoiceLabel">Factura o referencia</label><input type="file" id="g-invoice" name="invoice" /></div>
+        <div class="field"><label data-i18n="gDetailsLabel">Detalle</label><textarea id="g-details" name="details" rows="4" placeholder="Describe el problema"></textarea></div>
+        <p class="note" data-i18n="gFileNote">Adjunta la factura al email que se abrira tras enviar.</p>
+        <button type="submit" class="btn primary" data-i18n="gSubmit">Enviar garantia</button>
+      </form>
     </section>
 
     <section class="card" id="blog">
@@ -162,6 +219,21 @@
         <li data-i18n="tag4">Reparaciones y reformas ligeras</li>
         <li data-i18n="tag5">Zonas con poca oferta</li>
       </ul>
+    </section>
+
+    <section class="card" id="garantia">
+      <div class="label" data-i18n="guaranteeLabel">Garantia</div>
+      <h2 data-i18n="guaranteeTitle">Envia factura y detalle para tu garantia.</h2>
+      <p data-i18n="guaranteeText">Adjunta la factura y describe el problema para que podamos responder rapido.</p>
+      <form class="form" id="guarantee-form">
+        <div class="field"><label data-i18n="gNameLabel">Nombre</label><input type="text" id="g-name" name="name" placeholder="Tu nombre" /></div>
+        <div class="field"><label data-i18n="gEmailLabel">Email</label><input type="email" id="g-email" name="email" placeholder="correo@ejemplo.com" required /></div>
+        <div class="field"><label data-i18n="gPhoneLabel">Telefono</label><input type="tel" id="g-phone" name="phone" placeholder="+34..." /></div>
+        <div class="field"><label data-i18n="gInvoiceLabel">Factura o referencia</label><input type="file" id="g-invoice" name="invoice" /></div>
+        <div class="field"><label data-i18n="gDetailsLabel">Detalle</label><textarea id="g-details" name="details" rows="4" placeholder="Describe el problema"></textarea></div>
+        <p class="note" data-i18n="gFileNote">Adjunta la factura al email que se abrira tras enviar.</p>
+        <button type="submit" class="btn primary" data-i18n="gSubmit">Enviar garantia</button>
+      </form>
     </section>
 
     <div class="wrap">
@@ -214,11 +286,22 @@
         tag4: "Reparaciones y reformas ligeras",
         tag5: "Zonas con poca oferta",
         callCta: "Llamar ahora",
+        navGuarantee: "Garantia",
         emailBudgetCta: "Correo presupuesto",
         waCta: "WhatsApp ahora",
         waPrepared: "Enviar mensaje preparado",
         emailCta: "Enviar email",
         waPrefill: "Hola Grupo Puigcerver, necesito ayuda con [tema] en [zona], urgencia [hoy/48h/programar].",
+        guaranteeLabel: "Garantia",
+        guaranteeTitle: "Envia factura y detalle para tu garantia.",
+        guaranteeText: "Adjunta la factura y describe el problema para que podamos responder rapido.",
+        gNameLabel: "Nombre",
+        gEmailLabel: "Email",
+        gPhoneLabel: "Telefono",
+        gInvoiceLabel: "Factura o referencia",
+        gDetailsLabel: "Detalle",
+        gFileNote: "Adjunta la factura al email que se abrira tras enviar.",
+        gSubmit: "Enviar garantia",
         metalsLabel: "Precios de metales (EUR, spot)",
         metalsLoading: "Cargando cotizaciones...",
         metalsUpdated: "Actualizado",
@@ -287,11 +370,22 @@
         tag4: "Light repairs and upgrades",
         tag5: "Low-competition areas",
         callCta: "Call now",
+        navGuarantee: "Warranty",
         emailBudgetCta: "Email quote",
         waCta: "WhatsApp now",
         waPrepared: "Send prepared message",
         emailCta: "Send email",
         waPrefill: "Hi Grupo Puigcerver, I need help with [topic] in [area], urgency [today/48h/scheduled].",
+        guaranteeLabel: "Warranty",
+        guaranteeTitle: "Send invoice and details for your warranty.",
+        guaranteeText: "Attach the invoice and describe the issue so we can follow up quickly.",
+        gNameLabel: "Name",
+        gEmailLabel: "Email",
+        gPhoneLabel: "Phone",
+        gInvoiceLabel: "Invoice or reference",
+        gDetailsLabel: "Details",
+        gFileNote: "Attach the invoice to the email that opens after sending.",
+        gSubmit: "Send warranty",
         metalsLabel: "Live metal prices (EUR, spot)",
         metalsLoading: "Loading quotes...",
         metalsUpdated: "Updated",
@@ -360,11 +454,22 @@
         tag4: "Reparations legeres",
         tag5: "Zones a faible offre",
         callCta: "Appeler",
+        navGuarantee: "Garantie",
         emailBudgetCta: "Email devis",
         waCta: "WhatsApp",
         waPrepared: "Envoyer le message prepare",
         emailCta: "Envoyer un email",
         waPrefill: "Bonjour Grupo Puigcerver, j'ai besoin d'aide pour [sujet] a [zone], urgence [aujourd'hui/48h/programme].",
+        guaranteeLabel: "Garantie",
+        guaranteeTitle: "Envoyez facture et details pour votre garantie.",
+        guaranteeText: "Ajoutez la facture et decrivez le probleme pour un suivi rapide.",
+        gNameLabel: "Nom",
+        gEmailLabel: "Email",
+        gPhoneLabel: "Telephone",
+        gInvoiceLabel: "Facture ou reference",
+        gDetailsLabel: "Details",
+        gFileNote: "Ajoutez la facture a l'email qui s'ouvrira apres l'envoi.",
+        gSubmit: "Envoyer garantie",
         metalsLabel: "Prix des metaux (EUR, spot)",
         metalsLoading: "Chargement des cotations...",
         metalsUpdated: "Mis a jour",
@@ -433,11 +538,22 @@
         tag4: "Reparacions i reformes lleugeres",
         tag5: "Zones amb poca oferta",
         callCta: "Trucar ara",
+        navGuarantee: "Garantia",
         emailBudgetCta: "Email pressupost",
         waCta: "WhatsApp ara",
         waPrepared: "Enviar missatge preparat",
         emailCta: "Enviar email",
         waPrefill: "Hola Grupo Puigcerver, necessito ajuda amb [tema] a [zona], urgencia [avui/48h/programar].",
+        guaranteeLabel: "Garantia",
+        guaranteeTitle: "Envia factura i detall per a la garantia.",
+        guaranteeText: "Adjunta la factura i descriu el problema per fer seguiment rapid.",
+        gNameLabel: "Nom",
+        gEmailLabel: "Email",
+        gPhoneLabel: "Telefon",
+        gInvoiceLabel: "Factura o referencia",
+        gDetailsLabel: "Detall",
+        gFileNote: "Adjunta la factura al correu que s'obriran en enviar.",
+        gSubmit: "Enviar garantia",
         metalsLabel: "Preus de metalls (EUR, spot)",
         metalsLoading: "Carregant cotitzacions...",
         metalsUpdated: "Actualitzat",
@@ -478,7 +594,11 @@
     };
 
     const textNodes = document.querySelectorAll("[data-i18n]");
-    const pills = document.querySelectorAll(".lang-switch button");
+    const langToggle = document.getElementById("lang-toggle");
+    const langMenu = document.getElementById("lang-menu");
+    const langOptions = document.querySelectorAll(".lang-option");
+    const langFlag = document.getElementById("lang-current-flag");
+    const langLabel = document.getElementById("lang-current-label");
     const waButtons = [document.getElementById("cta-whatsapp"), document.getElementById("cta-whatsapp-inline")];
     const securityBtn = document.getElementById("cta-security");
     const metalContainer = document.getElementById("metal-prices");
@@ -491,6 +611,7 @@
     let metalData = null; // prices in USD
     let fxRate = null; // USD to EUR
     let currentLang = "es";
+    const langFlags = { es: "🇪🇸", en: "🇬🇧", fr: "🇫🇷", ca: "🇨🇦" };
 
     function applyLang(lang) {
       currentLang = lang;
@@ -502,14 +623,21 @@
       const encoded = encodeURIComponent(t.waPrefill);
       waButtons.forEach(btn => {
         if (btn) btn.href = `https://wa.me/34672737607?text=${encoded}`;
-        if (btn && btn.dataset.i18n) btn.textContent = t[btn.dataset.i18n];
+        const labelNode = btn ? btn.querySelector(".btn-label[data-i18n]") : null;
+        if (labelNode) labelNode.textContent = t[labelNode.dataset.i18n] || labelNode.textContent;
       });
       if (securityBtn) {
         const secText = encodeURIComponent(t.securityWaPrefill);
         securityBtn.href = `https://wa.me/34672737607?text=${secText}`;
         securityBtn.textContent = t.securityCta;
       }
-      pills.forEach(p => p.classList.toggle("active", p.dataset.lang === lang));
+      langOptions.forEach(btn => btn.classList.toggle("active", btn.dataset.lang === lang));
+      if (langFlag) langFlag.textContent = langFlags[lang] || "🌐";
+      if (langLabel) langLabel.textContent = lang.toUpperCase();
+      if (langMenu) {
+        langMenu.hidden = true;
+        if (langToggle) langToggle.setAttribute("aria-expanded", "false");
+      }
       document.documentElement.lang = lang;
       renderMetals(metalData);
     }
@@ -577,7 +705,45 @@
       }
     }
 
-    pills.forEach(btn => btn.addEventListener("click", () => applyLang(btn.dataset.lang)));
+    langOptions.forEach(btn => btn.addEventListener("click", (e) => {
+      e.stopPropagation();
+      applyLang(btn.dataset.lang);
+    }));
+    if (langToggle && langMenu) {
+      langToggle.addEventListener("click", () => {
+        const isOpen = langMenu.hidden === false;
+        langMenu.hidden = isOpen;
+        langToggle.setAttribute("aria-expanded", String(!isOpen));
+      });
+      document.addEventListener("click", e => {
+        if (!langMenu.hidden && !langMenu.contains(e.target) && !langToggle.contains(e.target)) {
+          langMenu.hidden = true;
+          langToggle.setAttribute("aria-expanded", "false");
+        }
+      });
+      document.addEventListener("keydown", e => {
+        if (e.key === "Escape" && !langMenu.hidden) {
+          langMenu.hidden = true;
+          langToggle.setAttribute("aria-expanded", "false");
+        }
+      });
+    }
+    const guaranteeForm = document.getElementById("guarantee-form");
+    if (guaranteeForm) {
+      guaranteeForm.addEventListener("submit", e => {
+        e.preventDefault();
+        const name = document.getElementById("g-name").value || "";
+        const email = document.getElementById("g-email").value || "";
+        const phone = document.getElementById("g-phone").value || "";
+        const details = document.getElementById("g-details").value || "";
+        const invoiceInput = document.getElementById("g-invoice");
+        const invoice = invoiceInput && invoiceInput.value ? invoiceInput.value.split("\\").pop() : "";
+        const subject = `Garantia - ${name || "cliente"}`;
+        const body = `Nombre: ${name}\\nEmail: ${email}\\nTelefono: ${phone}\\nFactura/archivo: ${invoice || "adjuntare manualmente"}\\nDetalle: ${details}`;
+        const mailto = `mailto:grupopuigcerver@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+        window.location.href = mailto;
+      });
+    }
     document.getElementById("y").textContent = new Date().getFullYear();
     applyLang("es");
     loadMetals();

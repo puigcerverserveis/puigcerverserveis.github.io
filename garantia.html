@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Garantia | Grupo Puigcerver</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <nav class="topbar">
+    <div class="wrap topbar-inner">
+      <div class="topbar-row topbar-main">
+        <div class="topbar-brand">
+          <div class="logo small">GP</div>
+          <div class="topbar-brand-text">
+            <span class="brand-name">Grupo Puigcerver</span>
+          </div>
+        </div>
+        <div class="topbar-actions">
+          <div class="lang-dropdown">
+            <button id="lang-toggle" class="pill lang-toggle" aria-haspopup="true" aria-expanded="false">
+              <span aria-hidden="true">🇪🇸</span>
+              <span class="sr-only">ES</span>
+            </button>
+            <div class="lang-menu" id="lang-menu" hidden>
+              <button class="lang-option" data-lang="es" aria-label="Español"><span aria-hidden="true">🇪🇸</span><span class="sr-only">ES</span></button>
+              <button class="lang-option" data-lang="en" aria-label="English"><span aria-hidden="true">🇬🇧</span><span class="sr-only">EN</span></button>
+              <button class="lang-option" data-lang="fr" aria-label="Français"><span aria-hidden="true">🇫🇷</span><span class="sr-only">FR</span></button>
+              <button class="lang-option" data-lang="ca" aria-label="Català"><span aria-hidden="true">🇨🇦</span><span class="sr-only">CA</span></button>
+            </div>
+          </div>
+          <div class="cta inline topbar-cta">
+            <a class="btn primary iconic" data-short="WA" href="https://wa.me/34672737607?text=Hola%20Grupo%20Puigcerver" target="_blank" rel="noopener"><span class="icon icon-wa" aria-hidden="true"></span><span class="btn-label">WhatsApp ahora</span></a>
+            <a class="btn iconic" data-short="Tel" href="tel:+34672737607"><span class="icon icon-phone" aria-hidden="true"></span><span class="btn-label">Llamar ahora</span></a>
+            <a class="btn iconic" data-short="Mail" href="mailto:grupopuigcerver@gmail.com?subject=Presupuesto%20-%20Grupo%20Puigcerver"><span class="icon icon-mail" aria-hidden="true"></span><span class="btn-label">Correo presupuesto</span></a>
+          </div>
+        </div>
+      </div>
+      <div class="topbar-row topbar-nav">
+        <div class="topbar-links">
+          <a href="index.html">Inicio</a>
+          <a href="servicios.html">Servicios</a>
+          <a href="seguridad.html">Seguridad</a>
+          <a href="zona.html">Zona</a>
+          <a href="garantia.html">Garantia</a>
+          <a href="contacto.html">Contacto</a>
+          <a href="blog.html">Blog</a>
+          <a href="revista.html">Revista</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <main class="wrap">
+    <section class="card highlight">
+      <div class="label">Garantia</div>
+      <h1>Garantia y soporte</h1>
+      <p>Envianos tu factura y detalle para gestionar la garantia.</p>
+    </section>
+    <section class="card">
+      <div class="label">Formulario</div>
+      <h2>Envianos tu factura y detalle</h2>
+      <p>Adjunta la factura y describe el problema para que podamos responder.</p>
+      <form class="form" id="guarantee-form">
+        <div class="field"><label>Nombre</label><input type="text" id="g-name" name="name" placeholder="Tu nombre" /></div>
+        <div class="field"><label>Email</label><input type="email" id="g-email" name="email" placeholder="correo@ejemplo.com" required /></div>
+        <div class="field"><label>Telefono</label><input type="tel" id="g-phone" name="phone" placeholder="+34..." /></div>
+        <div class="field"><label>Factura o referencia</label><input type="file" id="g-invoice" name="invoice" /></div>
+        <div class="field"><label>Detalle</label><textarea id="g-details" name="details" rows="4" placeholder="Describe el problema"></textarea></div>
+        <p class="note">Adjunta la factura al email que se abrira tras enviar.</p>
+        <button type="submit" class="btn primary">Enviar garantia</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; <span id="y"></span> Grupo Puigcerver &middot; +34 672 737 607 &middot; grupopuigcerver@gmail.com</p>
+  </footer>
+
+  <script>
+    const y=document.getElementById('y'); if(y) y.textContent=new Date().getFullYear();
+    const langToggle=document.getElementById('lang-toggle');
+    const langMenu=document.getElementById('lang-menu');
+    const langOptions=document.querySelectorAll('.lang-option');
+    if(langToggle && langMenu){
+      langToggle.addEventListener('click', ()=>{ const open=!langMenu.hidden; langMenu.hidden=open; langToggle.setAttribute('aria-expanded', String(!open)); });
+      document.addEventListener('click', e=>{ if(!langMenu.hidden && !langMenu.contains(e.target) && !langToggle.contains(e.target)){ langMenu.hidden=true; langToggle.setAttribute('aria-expanded','false'); }});
+    }
+    langOptions.forEach(btn=>btn.addEventListener('click', ()=>{ if(langMenu){ langMenu.hidden=true; langToggle.setAttribute('aria-expanded','false'); }}));
+    const gForm=document.getElementById('guarantee-form');
+    if(gForm){gForm.addEventListener('submit', e=>{e.preventDefault(); const name=document.getElementById('g-name').value||''; const email=document.getElementById('g-email').value||''; const phone=document.getElementById('g-phone').value||''; const details=document.getElementById('g-details').value||''; const invoiceInput=document.getElementById('g-invoice'); const invoice=invoiceInput && invoiceInput.value ? invoiceInput.value.split('\\\\').pop() : ''; const subject=`Garantia - ${name||'cliente'}`; const body=`Nombre: ${name}\\nEmail: ${email}\\nTelefono: ${phone}\\nFactura/archivo: ${invoice||'adjuntare manualmente'}\\nDetalle: ${details}`; const mailto=`mailto:grupopuigcerver@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`; window.location.href=mailto;});}
+  </script>
+</body>
+</html>

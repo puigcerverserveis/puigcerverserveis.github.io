@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Seguridad | Grupo Puigcerver</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <nav class="topbar">
+    <div class="wrap topbar-inner">
+      <div class="topbar-row topbar-main">
+        <div class="topbar-brand">
+          <div class="logo small">GP</div>
+          <div class="topbar-brand-text">
+            <span class="brand-name">Grupo Puigcerver</span>
+          </div>
+        </div>
+        <div class="topbar-actions">
+          <div class="lang-dropdown">
+            <button id="lang-toggle" class="pill lang-toggle" aria-haspopup="true" aria-expanded="false">
+              <span aria-hidden="true">🇪🇸</span>
+              <span class="sr-only">ES</span>
+            </button>
+            <div class="lang-menu" id="lang-menu" hidden>
+              <button class="lang-option" data-lang="es" aria-label="Español"><span aria-hidden="true">🇪🇸</span><span class="sr-only">ES</span></button>
+              <button class="lang-option" data-lang="en" aria-label="English"><span aria-hidden="true">🇬🇧</span><span class="sr-only">EN</span></button>
+              <button class="lang-option" data-lang="fr" aria-label="Français"><span aria-hidden="true">🇫🇷</span><span class="sr-only">FR</span></button>
+              <button class="lang-option" data-lang="ca" aria-label="Català"><span aria-hidden="true">🇨🇦</span><span class="sr-only">CA</span></button>
+            </div>
+          </div>
+          <div class="cta inline topbar-cta">
+            <a class="btn primary iconic" data-short="WA" href="https://wa.me/34672737607?text=Hola%20Grupo%20Puigcerver" target="_blank" rel="noopener"><span class="icon icon-wa" aria-hidden="true"></span><span class="btn-label">WhatsApp ahora</span></a>
+            <a class="btn iconic" data-short="Tel" href="tel:+34672737607"><span class="icon icon-phone" aria-hidden="true"></span><span class="btn-label">Llamar ahora</span></a>
+            <a class="btn iconic" data-short="Mail" href="mailto:grupopuigcerver@gmail.com?subject=Presupuesto%20-%20Grupo%20Puigcerver"><span class="icon icon-mail" aria-hidden="true"></span><span class="btn-label">Correo presupuesto</span></a>
+          </div>
+        </div>
+      </div>
+      <div class="topbar-row topbar-nav">
+        <div class="topbar-links">
+          <a href="index.html">Inicio</a>
+          <a href="servicios.html">Servicios</a>
+          <a href="seguridad.html">Seguridad</a>
+          <a href="zona.html">Zona</a>
+          <a href="garantia.html">Garantia</a>
+          <a href="contacto.html">Contacto</a>
+          <a href="blog.html">Blog</a>
+          <a href="revista.html">Revista</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <main class="wrap">
+    <section class="card highlight">
+      <div class="label">Seguridad</div>
+      <h1>Seguridad preventiva</h1>
+      <p>Evaluamos accesos y reforzamos sin alarmismo.</p>
+    </section>
+    <section class="card">
+      <h2>Que revisamos</h2>
+      <ul class="grid">
+        <li><strong>Diagnostico</strong><span>Puertas, rejas, persianas y puntos ocultos.</span></li>
+        <li><strong>Refuerzos</strong><span>Escudos, cerraduras y automatismos basicos.</span></li>
+        <li><strong>Plan por niveles</strong><span>Acciones rapidas y mejoras programadas.</span></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; <span id="y"></span> Grupo Puigcerver &middot; +34 672 737 607 &middot; grupopuigcerver@gmail.com</p>
+  </footer>
+
+  <script>
+    const y=document.getElementById('y'); if(y) y.textContent=new Date().getFullYear();
+    const langToggle=document.getElementById('lang-toggle');
+    const langMenu=document.getElementById('lang-menu');
+    const langOptions=document.querySelectorAll('.lang-option');
+    if(langToggle && langMenu){
+      langToggle.addEventListener('click', ()=>{ const open=!langMenu.hidden; langMenu.hidden=open; langToggle.setAttribute('aria-expanded', String(!open)); });
+      document.addEventListener('click', e=>{ if(!langMenu.hidden && !langMenu.contains(e.target) && !langToggle.contains(e.target)){ langMenu.hidden=true; langToggle.setAttribute('aria-expanded','false'); }});
+    }
+    langOptions.forEach(btn=>btn.addEventListener('click', ()=>{ if(langMenu){ langMenu.hidden=true; langToggle.setAttribute('aria-expanded','false'); }}));
+  </script>
+</body>
+</html>
