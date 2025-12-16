@@ -26,19 +26,22 @@ body {
   border-bottom: 1px solid var(--line);
 }
 .topbar-inner {
-  display: flex; align-items: center; justify-content: space-between; gap: 12px;
-  padding: 10px 20px;
+  display: flex; flex-direction: column; gap: 8px;
+  padding: 10px 16px;
 }
+.topbar-row { display: flex; gap: 12px; align-items: center; justify-content: space-between; flex-wrap: wrap; width: 100%; }
+.topbar-main { align-items: center; }
 .topbar-brand { display: inline-flex; align-items: center; gap: 8px; font-weight: 700; letter-spacing: 0.3px; }
-.topbar-links { display: none; gap: 12px; flex-wrap: wrap; }
+.topbar-brand-text { display: flex; flex-direction: column; gap: 2px; }
+.brand-name { font-weight: 700; letter-spacing: 0.3px; }
+.topbar-actions { display: flex; align-items: center; justify-content: flex-end; gap: 10px; flex-wrap: wrap; }
+.topbar-links { display: flex; gap: 10px; flex-wrap: wrap; }
+.topbar-links a { white-space: nowrap; font-size: 14px; }
 .topbar a { color: var(--muted); text-decoration: none; font-weight: 600; }
 .topbar a:hover { color: var(--accent); }
 .logo.small { width: 38px; height: 38px; font-size: 14px; }
-.phone-link { border: 1px solid var(--line); color: var(--txt); }
 
 .wrap { max-width: 1100px; margin: 0 auto; padding: 26px 20px 32px; }
-.hero { display: flex; flex-direction: column; gap: 14px; padding-top: 24px; }
-.brand { display: flex; gap: 14px; align-items: center; }
 .logo {
   width: 52px; height: 52px;
   border-radius: 14px;
@@ -48,7 +51,6 @@ body {
   background: linear-gradient(140deg, rgba(123,220,181,.15), rgba(111,166,255,.10));
 }
 h1 { margin: 0; font-size: 24px; letter-spacing: 0.3px; }
-.subtitle { margin: 4px 0 0; color: var(--muted); }
 
 .lang-switch { display: flex; gap: 8px; flex-wrap: wrap; }
 .pill {
@@ -171,6 +173,23 @@ p { margin: 0 0 10px; color: var(--muted); line-height: 1.6; }
 .btn.tiny { padding: 10px 12px; font-size: 14px; }
 
 @media (min-width: 900px) {
-  .hero { flex-direction: row; align-items: center; justify-content: space-between; }
-  .micro { text-align: right; }
+  .topbar-row { flex-wrap: nowrap; }
+  .topbar-actions { justify-content: flex-end; }
+}
+
+@media (max-width: 640px) {
+  .topbar-inner { padding: 8px 12px; gap: 6px; }
+  .topbar-links { gap: 8px; }
+  .btn[data-short] {
+    position: relative;
+    padding: 10px 12px;
+    font-size: 0;
+  }
+  .btn[data-short]::before {
+    content: attr(data-short);
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0.2px;
+  }
+  .lang-switch { gap: 6px; }
 }

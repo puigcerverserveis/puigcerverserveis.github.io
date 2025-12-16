@@ -11,58 +11,39 @@
 <body>
   <nav class="topbar">
     <div class="wrap topbar-inner">
-      <div class="topbar-brand">
-        <div class="logo small">GP</div>
-        <span>Grupo Puigcerver</span>
+      <div class="topbar-row topbar-main">
+        <div class="topbar-brand">
+          <div class="logo small">GP</div>
+          <div class="topbar-brand-text">
+            <span class="brand-name">Grupo Puigcerver</span>
+          </div>
+        </div>
+        <div class="topbar-actions">
+          <div class="lang-switch" aria-label="Select language">
+            <button data-lang="es" class="pill active">ES</button>
+            <button data-lang="en" class="pill">EN</button>
+            <button data-lang="fr" class="pill">FR</button>
+            <button data-lang="ca" class="pill">CA</button>
+          </div>
+          <div class="cta inline topbar-cta">
+            <a class="btn primary" id="cta-whatsapp" data-short="WA" href="https://wa.me/34672737607?text=Hola%20Grupo%20Puigcerver%2C%20necesito%20ayuda%20con%20%5Btema%5D%20en%20%5Bzona%5D%2C%20urgencia%20%5Bhoy%2F48h%2Fprogramar%5D." target="_blank" rel="noopener" data-i18n="waCta">WhatsApp ahora</a>
+            <a class="btn" data-short="Tel" href="tel:+34672737607" data-i18n="callCta">Llamar ahora</a>
+            <a class="btn" id="cta-email" data-short="Mail" href="mailto:grupopuigcerver@gmail.com?subject=Presupuesto%20-%20Grupo%20Puigcerver&body=Hola%2C%0A%0ANecesito%20presupuesto%20para%3A%20%0AZona%3A%20%0APlazo%3A%20%0A%0AGracias." data-i18n="emailBudgetCta">Correo presupuesto</a>
+          </div>
+        </div>
       </div>
-      <div class="topbar-links">
-        <a href="#servicios" data-i18n="navServices">Servicios</a>
-        <a href="#seguridad" data-i18n="navSecurity">Seguridad</a>
-        <a href="#cobertura" data-i18n="navCoverage">Zona</a>
-        <a href="#contacto" data-i18n="navContact">Contacto</a>
-        <a href="#blog" data-i18n="navBlog">Blog</a>
-        <a href="#revista" data-i18n="navMagazine">Revista</a>
+      <div class="topbar-row topbar-nav">
+        <div class="topbar-links">
+          <a href="#servicios" data-i18n="navServices">Servicios</a>
+          <a href="#seguridad" data-i18n="navSecurity">Seguridad</a>
+          <a href="#cobertura" data-i18n="navCoverage">Zona</a>
+          <a href="#contacto" data-i18n="navContact">Contacto</a>
+          <a href="#blog" data-i18n="navBlog">Blog</a>
+          <a href="#revista" data-i18n="navMagazine">Revista</a>
+        </div>
       </div>
-      <a class="pill phone-link" href="tel:+34672737607">+34 672 737 607</a>
     </div>
   </nav>
-  <header class="wrap hero">
-    <div class="brand">
-      <div class="logo">GP</div>
-      <div>
-        <h1>Grupo Puigcerver</h1>
-        <p class="subtitle" data-i18n="tagline">Servicios generales para vivienda y pequeño local, con trato directo y claridad.</p>
-      </div>
-    </div>
-
-    <div class="lang-switch" aria-label="Select language">
-      <button data-lang="es" class="pill active">ES</button>
-      <button data-lang="en" class="pill">EN</button>
-      <button data-lang="fr" class="pill">FR</button>
-      <button data-lang="ca" class="pill">CA</button>
-    </div>
-
-    <div class="cta">
-      <a class="btn primary" href="tel:+34672737607" data-i18n="callCta">Llamar ahora</a>
-      <a class="btn" id="cta-whatsapp" href="https://wa.me/34672737607?text=Hola%20Grupo%20Puigcerver%2C%20necesito%20ayuda%20con%20%5Btema%5D%20en%20%5Bzona%5D%2C%20urgencia%20%5Bhoy%2F48h%2Fprogramar%5D." target="_blank" rel="noopener" data-i18n="waCta">WhatsApp ahora</a>
-    </div>
-
-    <p class="micro">
-      Tel: <strong>+34 672 737 607</strong> &middot; Email: <strong>grupopuigcerver@gmail.com</strong>
-    </p>
-  </header>
-
-  <div class="wrap">
-    <div class="metal-strip" aria-live="polite">
-      <div class="strip-head">
-        <div class="label" data-i18n="metalsLabel">Precios de metales (EUR, spot)</div>
-        <span class="micro" id="metal-status" data-i18n="metalsLoading">Cargando cotizaciones...</span>
-      </div>
-      <div class="ticker">
-        <div class="ticker-inner" id="metal-prices"></div>
-      </div>
-    </div>
-  </div>
 
   <main class="wrap">
     <section class="card highlight">
@@ -183,6 +164,18 @@
       </ul>
     </section>
 
+    <div class="wrap">
+      <div class="metal-strip" aria-live="polite">
+        <div class="strip-head">
+          <div class="label" data-i18n="metalsLabel">Precios de metales (EUR, spot)</div>
+          <span class="micro" id="metal-status" data-i18n="metalsLoading">Cargando cotizaciones...</span>
+        </div>
+        <div class="ticker">
+          <div class="ticker-inner" id="metal-prices"></div>
+        </div>
+      </div>
+    </div>
+
     <footer class="footer">
       <p>&copy; <span id="y"></span> Grupo Puigcerver &middot; +34 672 737 607 &middot; grupopuigcerver@gmail.com</p>
     </footer>
@@ -221,6 +214,7 @@
         tag4: "Reparaciones y reformas ligeras",
         tag5: "Zonas con poca oferta",
         callCta: "Llamar ahora",
+        emailBudgetCta: "Correo presupuesto",
         waCta: "WhatsApp ahora",
         waPrepared: "Enviar mensaje preparado",
         emailCta: "Enviar email",
@@ -293,6 +287,7 @@
         tag4: "Light repairs and upgrades",
         tag5: "Low-competition areas",
         callCta: "Call now",
+        emailBudgetCta: "Email quote",
         waCta: "WhatsApp now",
         waPrepared: "Send prepared message",
         emailCta: "Send email",
@@ -365,6 +360,7 @@
         tag4: "Reparations legeres",
         tag5: "Zones a faible offre",
         callCta: "Appeler",
+        emailBudgetCta: "Email devis",
         waCta: "WhatsApp",
         waPrepared: "Envoyer le message prepare",
         emailCta: "Envoyer un email",
@@ -437,6 +433,7 @@
         tag4: "Reparacions i reformes lleugeres",
         tag5: "Zones amb poca oferta",
         callCta: "Trucar ara",
+        emailBudgetCta: "Email pressupost",
         waCta: "WhatsApp ara",
         waPrepared: "Enviar missatge preparat",
         emailCta: "Enviar email",
