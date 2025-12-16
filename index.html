@@ -9,6 +9,23 @@
 </head>
 
 <body>
+  <nav class="topbar">
+    <div class="wrap topbar-inner">
+      <div class="topbar-brand">
+        <div class="logo small">GP</div>
+        <span>Grupo Puigcerver</span>
+      </div>
+      <div class="topbar-links">
+        <a href="#servicios" data-i18n="navServices">Servicios</a>
+        <a href="#seguridad" data-i18n="navSecurity">Seguridad</a>
+        <a href="#cobertura" data-i18n="navCoverage">Zona</a>
+        <a href="#contacto" data-i18n="navContact">Contacto</a>
+        <a href="#blog" data-i18n="navBlog">Blog</a>
+        <a href="#revista" data-i18n="navMagazine">Revista</a>
+      </div>
+      <a class="pill phone-link" href="tel:+34672737607">+34 672 737 607</a>
+    </div>
+  </nav>
   <header class="wrap hero">
     <div class="brand">
       <div class="logo">GP</div>
@@ -35,6 +52,18 @@
     </p>
   </header>
 
+  <div class="wrap">
+    <div class="metal-strip" aria-live="polite">
+      <div class="strip-head">
+        <div class="label" data-i18n="metalsLabel">Precios de metales (EUR, spot)</div>
+        <span class="micro" id="metal-status" data-i18n="metalsLoading">Cargando cotizaciones...</span>
+      </div>
+      <div class="ticker">
+        <div class="ticker-inner" id="metal-prices"></div>
+      </div>
+    </div>
+  </div>
+
   <main class="wrap">
     <section class="card highlight">
       <div class="label" data-i18n="coverageLabel">Zona de trabajo</div>
@@ -44,6 +73,23 @@
       </p>
       <div class="note" data-i18n="coverageNote">
         Fuera del radio urgente, avisanos: programamos visita, llevamos tecnico y resolvemos con la misma claridad. Mapa de zona de urgencias en camino; fuera de radio, cita concertada o pago previo para evitar desplazamientos en vano.
+      </div>
+    </section>
+
+    <section class="card" id="seguridad">
+      <div class="label" data-i18n="securityLabel">Seguridad preventiva</div>
+      <h2 data-i18n="securityTitle">Evaluamos tu inmueble y cerramos brechas de seguridad.</h2>
+      <p data-i18n="securityText">
+        Revisamos accesos, cierres y rutinas para detectar puntos vulnerables antes de que den problemas. Entregamos un plan concreto con refuerzos, domotica simple y buenas practicas para vivienda o local.
+      </p>
+      <ul class="grid">
+        <li><strong data-i18n="securityItem1">Diagnostico en sitio</strong><span data-i18n="securityItem1Text">Inspeccion de puertas, persianas, rejas, cerraduras y accesos secundarios.</span></li>
+        <li><strong data-i18n="securityItem2">Refuerzos sin obras grandes</strong><span data-i18n="securityItem2Text">Escudos, cerrajeria segura, sensores discretos y automatismos basicos.</span></li>
+        <li><strong data-i18n="securityItem3">Plan por niveles</strong><span data-i18n="securityItem3Text">Prioridades por riesgo y presupuesto, con acciones inmediatas y seguimiento.</span></li>
+      </ul>
+      <div class="cta inline">
+        <a class="btn primary" id="cta-security" href="https://wa.me/34672737607?text=Hola%20Grupo%20Puigcerver%2C%20quiero%20una%20revision%20de%20seguridad%20en%20%5Bzona%5D%3A%20accesos%2C%20persianas%20y%20cerraduras." target="_blank" rel="noopener" data-i18n="securityCta">Pedir revision de seguridad</a>
+        <a class="btn" href="tel:+34672737607" data-i18n="callCta">Llamar ahora</a>
       </div>
     </section>
 
@@ -90,6 +136,36 @@
         <a class="btn primary" id="cta-whatsapp-inline" href="https://wa.me/34672737607?text=Hola%20Grupo%20Puigcerver%2C%20necesito%20ayuda%20con%20%5Btema%5D%20en%20%5Bzona%5D%2C%20urgencia%20%5Bhoy%2F48h%2Fprogramar%5D." target="_blank" rel="noopener" data-i18n="waPrepared">Enviar mensaje preparado</a>
         <a class="btn" href="mailto:grupopuigcerver@gmail.com?subject=Solicitud%20de%20servicio%20-%20Grupo%20Puigcerver&body=Hola%2C%0A%0ANecesito%20ayuda%20con%3A%20%0AZona%3A%20%0AUrgencia%3A%20%0A%0AAdjunto%20fotos%20si%20es%20posible." data-i18n="emailCta">Enviar email</a>
       </div>
+    </section>
+
+    <section class="card" id="blog">
+      <div class="label" data-i18n="blogLabel">Blog por zonas</div>
+      <h2 data-i18n="blogTitle">Casos reales y consejos para tu barrio.</h2>
+      <p data-i18n="blogIntro">
+        Publicamos articulos cortos con los trabajos mas comunes por zona, lo que revisamos al llegar y como prevenir urgencias. Ideal para que vecinos y comercios sepan que esperar y como prepararse.
+      </p>
+      <ul class="grid">
+        <li>
+          <strong data-i18n="blog1Title">Barcelona ciudad: accesos y cierres</strong>
+          <span data-i18n="blog1Text">Puertas antiokupa, persianas de local y refuerzos en fincas antiguas sin obra grande.</span>
+          <a class="btn tiny" href="blog/index.html#barcelona" data-i18n="blogReadMore">Leer articulo</a>
+        </li>
+        <li>
+          <strong data-i18n="blog2Title">Valles Occidental: hogares y comunidades</strong>
+          <span data-i18n="blog2Text">Revisiones de seguridad, ajustes de persianas domesticas y soldadura ligera en accesos.</span>
+          <a class="btn tiny" href="blog/index.html#valles" data-i18n="blogReadMore">Leer articulo</a>
+        </li>
+        <li>
+          <strong data-i18n="blog3Title">Maresme: cierres expuestos a salitre</strong>
+          <span data-i18n="blog3Text">Mantenimiento preventivo, cambio de motores y proteccion anticorrosion en persianas.</span>
+          <a class="btn tiny" href="blog/index.html#maresme" data-i18n="blogReadMore">Leer articulo</a>
+        </li>
+        <li>
+          <strong data-i18n="blog4Title">Baix Llobregat: locales y naves</strong>
+          <span data-i18n="blog4Text">Automatismos, equilibrado de cierres y estudios rapidos de vulnerabilidades.</span>
+          <a class="btn tiny" href="blog/index.html#baix-llobregat" data-i18n="blogReadMore">Leer articulo</a>
+        </li>
+      </ul>
     </section>
 
     <section class="card">
@@ -148,7 +224,43 @@
         waCta: "WhatsApp ahora",
         waPrepared: "Enviar mensaje preparado",
         emailCta: "Enviar email",
-        waPrefill: "Hola Grupo Puigcerver, necesito ayuda con [tema] en [zona], urgencia [hoy/48h/programar]."
+        waPrefill: "Hola Grupo Puigcerver, necesito ayuda con [tema] en [zona], urgencia [hoy/48h/programar].",
+        metalsLabel: "Precios de metales (EUR, spot)",
+        metalsLoading: "Cargando cotizaciones...",
+        metalsUpdated: "Actualizado",
+        metalsError: "No se pudieron cargar las cotizaciones",
+        metalsFallback: "Dato de respaldo",
+        metalsUnitEur: "EUR/oz",
+        metalsUnavailable: "N/D",
+        metalGold: "Oro",
+        metalSilver: "Plata",
+        metalCopper: "Cobre",
+        metalAluminum: "Aluminio",
+        metalIron: "Hierro",
+        metalBronze: "Bronce",
+        blogLabel: "Blog por zonas",
+        blogTitle: "Casos reales y consejos para tu barrio.",
+        blogIntro: "Publicamos articulos cortos con los trabajos mas comunes por zona, lo que revisamos al llegar y como prevenir urgencias. Ideal para que vecinos y comercios sepan que esperar y como prepararse.",
+        blog1Title: "Barcelona ciudad: accesos y cierres",
+        blog1Text: "Puertas antiokupa, persianas de local y refuerzos en fincas antiguas sin obra grande.",
+        blog2Title: "Valles Occidental: hogares y comunidades",
+        blog2Text: "Revisiones de seguridad, ajustes de persianas domesticas y soldadura ligera en accesos.",
+        blog3Title: "Maresme: cierres expuestos a salitre",
+        blog3Text: "Mantenimiento preventivo, cambio de motores y proteccion anticorrosion en persianas.",
+        blog4Title: "Baix Llobregat: locales y naves",
+        blog4Text: "Automatismos, equilibrado de cierres y estudios rapidos de vulnerabilidades.",
+        blogReadMore: "Leer articulo",
+        securityLabel: "Seguridad preventiva",
+        securityTitle: "Evaluamos tu inmueble y cerramos brechas de seguridad.",
+        securityText: "Revisamos accesos, cierres y rutinas para detectar puntos vulnerables antes de que den problemas. Entregamos un plan concreto con refuerzos, domotica simple y buenas practicas para vivienda o local.",
+        securityItem1: "Diagnostico en sitio",
+        securityItem1Text: "Inspeccion de puertas, persianas, rejas, cerraduras y accesos secundarios.",
+        securityItem2: "Refuerzos sin obras grandes",
+        securityItem2Text: "Escudos, cerrajeria segura, sensores discretos y automatismos basicos.",
+        securityItem3: "Plan por niveles",
+        securityItem3Text: "Prioridades por riesgo y presupuesto, con acciones inmediatas y seguimiento.",
+        securityCta: "Pedir revision de seguridad",
+        securityWaPrefill: "Hola Grupo Puigcerver, quiero una revision de seguridad en [zona]: accesos, persianas y cerraduras."
       },
       en: {
         tagline: "General services for homes and small venues with clear, direct support.",
@@ -184,7 +296,43 @@
         waCta: "WhatsApp now",
         waPrepared: "Send prepared message",
         emailCta: "Send email",
-        waPrefill: "Hi Grupo Puigcerver, I need help with [topic] in [area], urgency [today/48h/scheduled]."
+        waPrefill: "Hi Grupo Puigcerver, I need help with [topic] in [area], urgency [today/48h/scheduled].",
+        metalsLabel: "Live metal prices (EUR, spot)",
+        metalsLoading: "Loading quotes...",
+        metalsUpdated: "Updated",
+        metalsError: "Could not load quotes",
+        metalsFallback: "Backup data",
+        metalsUnitEur: "EUR/oz",
+        metalsUnavailable: "N/A",
+        metalGold: "Gold",
+        metalSilver: "Silver",
+        metalCopper: "Copper",
+        metalAluminum: "Aluminum",
+        metalIron: "Iron",
+        metalBronze: "Bronze",
+        blogLabel: "Local blog",
+        blogTitle: "Real cases and tips for your area.",
+        blogIntro: "Short articles with the most common jobs by area, what we check on arrival, and how to prevent emergencies. Great for residents and shops to know what to expect and how to prepare.",
+        blog1Title: "Barcelona city: access and shutters",
+        blog1Text: "Anti-occupation doors, shop shutters, and reinforcements in older buildings without heavy works.",
+        blog2Title: "Valles Occidental: homes and communities",
+        blog2Text: "Security reviews, home shutter tune-ups, and light welding on access points.",
+        blog3Title: "Maresme: salt-exposed shutters",
+        blog3Text: "Preventive care, motor swaps, and anti-corrosion protection for shutters.",
+        blog4Title: "Baix Llobregat: shops and warehouses",
+        blog4Text: "Automation, shutter balancing, and quick vulnerability checks.",
+        blogReadMore: "Read article",
+        securityLabel: "Preventive security",
+        securityTitle: "We assess your property and close security gaps.",
+        securityText: "We review access points, shutters, and routines to spot vulnerabilities before they fail. We deliver a clear plan with reinforcements, simple smart controls, and good practices for homes or shops.",
+        securityItem1: "On-site diagnosis",
+        securityItem1Text: "Inspect doors, shutters, grills, locks, and secondary entries.",
+        securityItem2: "Reinforcement without heavy works",
+        securityItem2Text: "Shields, secure locks, discreet sensors, and basic automation.",
+        securityItem3: "Layered plan",
+        securityItem3Text: "Priorities by risk and budget, with quick wins and follow-up.",
+        securityCta: "Request security review",
+        securityWaPrefill: "Hi Grupo Puigcerver, I want a security review in [area]: access, shutters, and locks."
       },
       fr: {
         tagline: "Services generaux pour maison et petit local, avec accompagnement clair et direct.",
@@ -220,7 +368,43 @@
         waCta: "WhatsApp",
         waPrepared: "Envoyer le message prepare",
         emailCta: "Envoyer un email",
-        waPrefill: "Bonjour Grupo Puigcerver, j'ai besoin d'aide pour [sujet] a [zone], urgence [aujourd'hui/48h/programme]."
+        waPrefill: "Bonjour Grupo Puigcerver, j'ai besoin d'aide pour [sujet] a [zone], urgence [aujourd'hui/48h/programme].",
+        metalsLabel: "Prix des metaux (EUR, spot)",
+        metalsLoading: "Chargement des cotations...",
+        metalsUpdated: "Mis a jour",
+        metalsError: "Impossible de charger les cotations",
+        metalsFallback: "Donnees de secours",
+        metalsUnitEur: "EUR/oz",
+        metalsUnavailable: "N/D",
+        metalGold: "Or",
+        metalSilver: "Argent",
+        metalCopper: "Cuivre",
+        metalAluminum: "Aluminium",
+        metalIron: "Fer",
+        metalBronze: "Bronze",
+        blogLabel: "Blog local",
+        blogTitle: "Cas concrets et conseils pour votre quartier.",
+        blogIntro: "Articles courts avec les travaux les plus frequents par zone, ce que l'on verifie sur place et comment prevenir les urgences. Utile pour habitants et commerces.",
+        blog1Title: "Barcelone: acces et fermetures",
+        blog1Text: "Portes anti-intrusion, rideaux de magasin et renforts dans les immeubles anciens.",
+        blog2Title: "Valles Occidental: logements et coproprietes",
+        blog2Text: "Revues de securite, reglages de volets domestiques et petites soudures aux acces.",
+        blog3Title: "Maresme: volets exposes au sel",
+        blog3Text: "Entretien preventif, changement de moteurs et protection anticorrosion.",
+        blog4Title: "Baix Llobregat: commerces et entrepots",
+        blog4Text: "Automatismes, equilibrage des fermetures et checks rapides de vulnerabilites.",
+        blogReadMore: "Lire l'article",
+        securityLabel: "Securite preventive",
+        securityTitle: "Nous evaluons votre bien et comblons les failles.",
+        securityText: "Nous analysons acces, volets et habitudes pour detecter les points faibles avant l'incident. Plan clair avec renforts, domotique simple et bonnes pratiques pour logement ou commerce.",
+        securityItem1: "Diagnostic sur place",
+        securityItem1Text: "Inspection des portes, volets, grilles, serrures et acces secondaires.",
+        securityItem2: "Renforts sans gros travaux",
+        securityItem2Text: "Protections, serrures sures, capteurs discrets et automatisation simple.",
+        securityItem3: "Plan par niveaux",
+        securityItem3Text: "Priorites par risque et budget, actions rapides et suivi.",
+        securityCta: "Demander un audit de securite",
+        securityWaPrefill: "Bonjour Grupo Puigcerver, je souhaite un audit de securite a [zone] : acces, volets et serrures."
       },
       ca: {
         tagline: "Serveis generals per a habitatge i petit local amb tracte directe i clar.",
@@ -256,15 +440,63 @@
         waCta: "WhatsApp ara",
         waPrepared: "Enviar missatge preparat",
         emailCta: "Enviar email",
-        waPrefill: "Hola Grupo Puigcerver, necessito ajuda amb [tema] a [zona], urgencia [avui/48h/programar]."
+        waPrefill: "Hola Grupo Puigcerver, necessito ajuda amb [tema] a [zona], urgencia [avui/48h/programar].",
+        metalsLabel: "Preus de metalls (EUR, spot)",
+        metalsLoading: "Carregant cotitzacions...",
+        metalsUpdated: "Actualitzat",
+        metalsError: "No s'han pogut carregar les cotitzacions",
+        metalsFallback: "Dada de suport",
+        metalsUnitEur: "EUR/oz",
+        metalsUnavailable: "N/D",
+        metalGold: "Or",
+        metalSilver: "Plata",
+        metalCopper: "Coure",
+        metalAluminum: "Alumini",
+        metalIron: "Ferro",
+        metalBronze: "Bronze",
+        blogLabel: "Bloc per zones",
+        blogTitle: "Casos reals i consells per al teu barri.",
+        blogIntro: "Articles curts amb els treballs mes comuns per zona, que revisem en arribar i com prevenir urgencies. Util per a veins i comerços.",
+        blog1Title: "Barcelona ciutat: accessos i tancaments",
+        blog1Text: "Portes antiokupa, persianes de local i reforcos en finques antigues sense obra gran.",
+        blog2Title: "Valles Occidental: llars i comunitats",
+        blog2Text: "Revisions de seguretat, ajustos de persianes domestiques i soldadura lleugera en accessos.",
+        blog3Title: "Maresme: tancaments exposats a la sal",
+        blog3Text: "Manteniment preventiu, canvi de motors i proteccio anticorrosio en persianes.",
+        blog4Title: "Baix Llobregat: locals i naus",
+        blog4Text: "Automatismes, equilibrat de tancaments i revisions rapides de vulnerabilitats.",
+        blogReadMore: "Llegir article",
+        securityLabel: "Seguretat preventiva",
+        securityTitle: "Avaluem el teu immoble i tanquem les bretxes.",
+        securityText: "Revisem accessos, tancaments i rutines per detectar punts febles abans que fallin. Lliurem un pla clar amb reforcos, domotica senzilla i bones practiques per a llar o comerç.",
+        securityItem1: "Diagnosi in situ",
+        securityItem1Text: "Inspeccio de portes, persianes, reixes, panys i accessos secundaris.",
+        securityItem2: "Reforcos sense gran obra",
+        securityItem2Text: "Escuts, serralleria segura, sensors discrets i automatismes basics.",
+        securityItem3: "Pla per nivells",
+        securityItem3Text: "Prioritats per risc i pressupost, amb accions rapides i seguiment.",
+        securityCta: "Demanar revisio de seguretat",
+        securityWaPrefill: "Hola Grupo Puigcerver, vull una revisio de seguretat a [zona]: accessos, persianes i panys."
       }
     };
 
     const textNodes = document.querySelectorAll("[data-i18n]");
     const pills = document.querySelectorAll(".lang-switch button");
     const waButtons = [document.getElementById("cta-whatsapp"), document.getElementById("cta-whatsapp-inline")];
+    const securityBtn = document.getElementById("cta-security");
+    const metalContainer = document.getElementById("metal-prices");
+    const metalStatus = document.getElementById("metal-status");
+    const metalOrder = ["gold", "silver", "copper", "aluminum", "iron", "bronze"];
+    const metalIcons = { gold: "Au", silver: "Ag", copper: "Cu", aluminum: "Al", iron: "Fe", bronze: "Br" };
+    const defaultMetals = { gold: 2200, silver: 25.1, copper: 4.02, aluminum: 1.05, iron: 0.12, bronze: 3.4 };
+    const defaultFxRate = 0.92;
+    let usedFallback = false;
+    let metalData = null; // prices in USD
+    let fxRate = null; // USD to EUR
+    let currentLang = "es";
 
     function applyLang(lang) {
+      currentLang = lang;
       const t = translations[lang] || translations.es;
       textNodes.forEach(node => {
         const key = node.getAttribute("data-i18n");
@@ -275,13 +507,84 @@
         if (btn) btn.href = `https://wa.me/34672737607?text=${encoded}`;
         if (btn && btn.dataset.i18n) btn.textContent = t[btn.dataset.i18n];
       });
+      if (securityBtn) {
+        const secText = encodeURIComponent(t.securityWaPrefill);
+        securityBtn.href = `https://wa.me/34672737607?text=${secText}`;
+        securityBtn.textContent = t.securityCta;
+      }
       pills.forEach(p => p.classList.toggle("active", p.dataset.lang === lang));
       document.documentElement.lang = lang;
+      renderMetals(metalData);
+    }
+
+    function renderMetals(data) {
+      if (!metalContainer) return;
+      const t = translations[currentLang] || translations.es;
+      const rate = fxRate || defaultFxRate;
+      const items = metalOrder.map(key => {
+        const label = t[`metal${key.charAt(0).toUpperCase() + key.slice(1)}`] || key;
+        const icon = metalIcons[key] || key.charAt(0).toUpperCase();
+        if (data && typeof data[key] === "number") {
+          const eur = rate ? `${(data[key] * rate).toFixed(2)} ${t.metalsUnitEur}` : t.metalsUnavailable;
+          return `<span class="metal-pill"><span class="metal-icon metal-${key}">${icon}</span><strong>${label}</strong><span>${eur}</span></span>`;
+        }
+        return `<span class="metal-pill"><span class="metal-icon metal-${key}">${icon}</span><strong>${label}</strong><span>${t.metalsUnavailable}</span></span>`;
+      }).join("");
+      metalContainer.innerHTML = items;
+      if (metalStatus) {
+        const note = usedFallback ? ` (${t.metalsFallback})` : "";
+        metalStatus.textContent = data ? `${t.metalsUpdated}${note}` : t.metalsLoading;
+      }
+    }
+
+    async function loadFx() {
+      const t = translations[currentLang] || translations.es;
+      try {
+        const res = await fetch("https://api.exchangerate.host/latest?base=USD&symbols=EUR");
+        if (!res.ok) throw new Error("Bad response FX");
+        const json = await res.json();
+        if (json && json.rates && typeof json.rates.EUR === "number") {
+          fxRate = json.rates.EUR;
+        }
+      } catch (_) {
+        fxRate = fxRate || defaultFxRate;
+        usedFallback = true;
+        if (metalStatus && metalData) metalStatus.textContent = `${t.metalsUpdated} (${t.metalsFallback})`;
+      }
+    }
+
+    async function loadMetals() {
+      if (!metalContainer) return;
+      const t = translations[currentLang] || translations.es;
+      if (metalStatus) metalStatus.textContent = t.metalsLoading;
+      try {
+        usedFallback = false;
+        const res = await fetch("https://api.metals.live/v1/spot");
+        if (!res.ok) throw new Error("Bad response");
+        const json = await res.json();
+        const map = {};
+        json.forEach(entry => {
+          const [name, price] = entry;
+          if (name && typeof price === "number") map[name.toLowerCase()] = price;
+        });
+        metalData = map;
+        await loadFx();
+        renderMetals(map);
+        if (metalStatus) metalStatus.textContent = t.metalsUpdated;
+      } catch (err) {
+        metalData = metalData || defaultMetals;
+        usedFallback = true;
+        fxRate = fxRate || defaultFxRate;
+        renderMetals(metalData);
+        if (metalStatus) metalStatus.textContent = `${t.metalsUpdated} (${t.metalsFallback})`;
+      }
     }
 
     pills.forEach(btn => btn.addEventListener("click", () => applyLang(btn.dataset.lang)));
     document.getElementById("y").textContent = new Date().getFullYear();
     applyLang("es");
+    loadMetals();
+    setInterval(loadMetals, 300000);
   </script>
 </body>
 </html>
