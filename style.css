@@ -249,6 +249,23 @@ p { margin: 0 0 10px; color: var(--muted); line-height: 1.6; }
 .hero-cta .btn { flex: 1 1 220px; min-width: 180px; }
 .hero-contact { color: var(--muted); margin: 6px 0 2px; }
 .hero-note { color: var(--muted); margin: 0; }
+.urgent-chips {
+  list-style: none;
+  padding: 0;
+  margin: 8px 0 4px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.urgent-chips li {
+  border: 1px solid var(--line);
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: rgba(15,23,42,.04);
+  color: var(--txt);
+  font-size: 12px;
+  font-weight: 600;
+}
 .brand { display: flex; align-items: center; gap: 14px; flex-wrap: wrap; }
 .subtitle { margin: 6px 0 0; color: var(--muted); }
 
@@ -257,6 +274,8 @@ p { margin: 0 0 10px; color: var(--muted); line-height: 1.6; }
   h1.hero-title { font-size: 24px; }
   .hero-cta { flex-direction: column; }
   .hero-cta .btn { width: 100%; }
+  .urgent-chips { gap: 6px; }
+  .urgent-chips li { font-size: 11px; }
 }
 
 .tags {
