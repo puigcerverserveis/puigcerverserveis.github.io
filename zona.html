@@ -4,6 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Zona | Grupo Puigcerver</title>
+  <meta name="description" content="Cobertura local en Barcelones y Valles, urgencias 24/7 en radio 60 km y visitas programadas fuera de zona." />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -19,14 +20,14 @@
         <div class="topbar-actions">
           <div class="lang-dropdown">
             <button id="lang-toggle" class="pill lang-toggle" aria-haspopup="true" aria-expanded="false">
-              <span aria-hidden="true">🇪🇸</span>
+              <span aria-hidden="true">ES</span>
               <span class="sr-only">ES</span>
             </button>
             <div class="lang-menu" id="lang-menu" hidden>
-              <button class="lang-option" data-lang="es" aria-label="Español"><span aria-hidden="true">🇪🇸</span><span class="sr-only">ES</span></button>
-              <button class="lang-option" data-lang="en" aria-label="English"><span aria-hidden="true">🇬🇧</span><span class="sr-only">EN</span></button>
-              <button class="lang-option" data-lang="fr" aria-label="Français"><span aria-hidden="true">🇫🇷</span><span class="sr-only">FR</span></button>
-              <button class="lang-option" data-lang="ca" aria-label="Català"><span aria-hidden="true">🇨🇦</span><span class="sr-only">CA</span></button>
+              <button class="lang-option" data-lang="es" aria-label="Espanol"><span aria-hidden="true">ES</span><span class="sr-only">ES</span></button>
+              <button class="lang-option" data-lang="en" aria-label="English"><span aria-hidden="true">EN</span><span class="sr-only">EN</span></button>
+              <button class="lang-option" data-lang="fr" aria-label="Francais"><span aria-hidden="true">FR</span><span class="sr-only">FR</span></button>
+              <button class="lang-option" data-lang="ca" aria-label="Catala"><span aria-hidden="true">CA</span><span class="sr-only">CA</span></button>
             </div>
           </div>
           <div class="cta inline topbar-cta">
@@ -54,17 +55,26 @@
     <section class="card highlight">
       <div class="label">Zona</div>
       <h1>Cobertura y radio</h1>
-      <p>Urgencias en Barcelones y alrededores; resto con cita.</p>
+      <p>Empresa local: urgencias 24/7 en la zona y visitas programadas en el resto, sin sobrecostes en el area habitual.</p>
     </section>
     <section class="card">
       <h2>Como trabajamos</h2>
-      <p>Urgencias en radio ~60 km desde Valles Occidental hacia Barcelones. Resto de Catalunya con visita programada y confirmacion previa.</p>
+      <p>Urgencias en radio ~60 km desde Valles Occidental hacia Barcelones. Resto de Catalunya con visita programada, coste acordado y confirmacion previa.</p>
+      <div class="note">Si estas fuera del radio urgente, confirmamos disponibilidad, horarios y condiciones antes de movernos.</div>
+      <div class="cta inline">
+        <a class="btn primary" href="https://wa.me/34672737607?text=Quiero%20confirmar%20cobertura%20en%20%5Bzona%5D%20para%20cerrajeria%2Fsoldadura%2Fautomatismos." target="_blank" rel="noopener">Confirmar cobertura</a>
+      </div>
     </section>
   </main>
 
   <footer class="footer">
     <p>&copy; <span id="y"></span> Grupo Puigcerver &middot; +34 672 737 607 &middot; grupopuigcerver@gmail.com</p>
   </footer>
+
+  <div class="mobile-cta" aria-label="Acciones rapidas">
+    <a class="btn primary iconic" href="tel:+34672737607"><span class="icon icon-phone" aria-hidden="true"></span><span class="btn-label">Llamar ahora</span></a>
+    <a class="btn iconic" href="https://wa.me/34672737607?text=Hola%20Grupo%20Puigcerver%2C%20quiero%20confirmar%20cobertura%20en%20%5Bzona%5D." target="_blank" rel="noopener"><span class="icon icon-wa" aria-hidden="true"></span><span class="btn-label">WhatsApp ahora</span></a>
+  </div>
 
   <script>
     const y=document.getElementById('y'); if(y) y.textContent=new Date().getFullYear();

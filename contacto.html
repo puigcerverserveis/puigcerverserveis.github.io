@@ -4,6 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Contacto | Grupo Puigcerver</title>
+  <meta name="description" content="Telefono y WhatsApp 24/7 para urgencias. Correo para presupuestos y proveedor estable." />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -19,14 +20,14 @@
         <div class="topbar-actions">
           <div class="lang-dropdown">
             <button id="lang-toggle" class="pill lang-toggle" aria-haspopup="true" aria-expanded="false">
-              <span aria-hidden="true">🇪🇸</span>
+              <span aria-hidden="true">ES</span>
               <span class="sr-only">ES</span>
             </button>
             <div class="lang-menu" id="lang-menu" hidden>
-              <button class="lang-option" data-lang="es" aria-label="Español"><span aria-hidden="true">🇪🇸</span><span class="sr-only">ES</span></button>
-              <button class="lang-option" data-lang="en" aria-label="English"><span aria-hidden="true">🇬🇧</span><span class="sr-only">EN</span></button>
-              <button class="lang-option" data-lang="fr" aria-label="Français"><span aria-hidden="true">🇫🇷</span><span class="sr-only">FR</span></button>
-              <button class="lang-option" data-lang="ca" aria-label="Català"><span aria-hidden="true">🇨🇦</span><span class="sr-only">CA</span></button>
+              <button class="lang-option" data-lang="es" aria-label="Espanol"><span aria-hidden="true">ES</span><span class="sr-only">ES</span></button>
+              <button class="lang-option" data-lang="en" aria-label="English"><span aria-hidden="true">EN</span><span class="sr-only">EN</span></button>
+              <button class="lang-option" data-lang="fr" aria-label="Francais"><span aria-hidden="true">FR</span><span class="sr-only">FR</span></button>
+              <button class="lang-option" data-lang="ca" aria-label="Catala"><span aria-hidden="true">CA</span><span class="sr-only">CA</span></button>
             </div>
           </div>
           <div class="cta inline topbar-cta">
@@ -54,19 +55,34 @@
     <section class="card highlight">
       <div class="label">Contacto</div>
       <h1>Contacto directo</h1>
-      <p>Habla por telefono, WhatsApp o correo.</p>
+      <p>Telefono y WhatsApp para urgencias 24/7. Correo para presupuestos y propuestas de proveedor estable.</p>
     </section>
     <section class="card">
       <h2>Datos rapidos</h2>
       <p>Telefono: <a href="tel:+34672737607">+34 672 737 607</a></p>
       <p>Email: <a href="mailto:grupopuigcerver@gmail.com">grupopuigcerver@gmail.com</a></p>
       <p>WhatsApp: <a href="https://wa.me/34672737607?text=Hola%20Grupo%20Puigcerver" target="_blank" rel="noopener">Abrir chat</a></p>
+      <p>Horario: urgencias 24/7 y visitas programadas con cita.</p>
+    </section>
+    <section class="card">
+      <h2>Para responder rapido</h2>
+      <p>Envia por WhatsApp: 1) Trabajo y empresa/comunidad, 2) Zona, 3) Urgencia (hoy / 48h / programar), 4) 2 fotos si es posible.</p>
+      <div class="note">Trabajamos con precios pactados antes de movernos. Si no tienes proveedor fijo, cuentanos tu operativa.</div>
+      <div class="cta inline">
+        <a class="btn primary" href="https://wa.me/34672737607?text=Hola%20Grupo%20Puigcerver%2C%20necesito%20ayuda%20con%20%5Btema%5D%20en%20%5Bzona%5D%2C%20urgencia%20%5Bhoy%2F48h%2Fprogramar%5D." target="_blank" rel="noopener">Enviar mensaje preparado</a>
+        <a class="btn" href="mailto:grupopuigcerver@gmail.com?subject=Proveedor%20estable%20-%20Grupo%20Puigcerver&body=Hola%2C%0A%0AQueremos%20valorar%20proveedor%20estable%20para%20cerrajeria%2Fsoldadura%2Fautomatismos%2Fpersianas.%0AZona%3A%0AContacto%3A%0A%0AGracias.">Propuesta de proveedor</a>
+      </div>
     </section>
   </main>
 
   <footer class="footer">
     <p>&copy; <span id="y"></span> Grupo Puigcerver &middot; +34 672 737 607 &middot; grupopuigcerver@gmail.com</p>
   </footer>
+
+  <div class="mobile-cta" aria-label="Acciones rapidas">
+    <a class="btn primary iconic" href="tel:+34672737607"><span class="icon icon-phone" aria-hidden="true"></span><span class="btn-label">Llamar ahora</span></a>
+    <a class="btn iconic" href="https://wa.me/34672737607?text=Hola%20Grupo%20Puigcerver%2C%20necesito%20ayuda%20con%20%5Btema%5D%20en%20%5Bzona%5D." target="_blank" rel="noopener"><span class="icon icon-wa" aria-hidden="true"></span><span class="btn-label">WhatsApp ahora</span></a>
+  </div>
 
   <script>
     const y=document.getElementById('y'); if(y) y.textContent=new Date().getFullYear();
