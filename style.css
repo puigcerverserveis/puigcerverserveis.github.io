@@ -290,6 +290,22 @@ p { margin: 0 0 10px; color: var(--muted); line-height: 1.6; }
   .topbar-links { gap: 8px; }
   .topbar-cta .btn:nth-child(3) { display: none; }
   .topbar-cta .btn { padding: 10px 12px; }
+  .topbar-cta .btn-label,
+  .mobile-cta .btn-label {
+    display: none;
+  }
+  .topbar-cta .btn,
+  .mobile-cta .btn {
+    min-width: 46px;
+    justify-content: center;
+  }
+  .topbar-cta .btn .icon,
+  .mobile-cta .btn .icon {
+    margin-right: 0;
+    width: 20px;
+    height: 20px;
+    background-size: 16px;
+  }
 }
 
 @media (max-width: 720px) {
